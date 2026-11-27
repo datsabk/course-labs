@@ -1,0 +1,10 @@
+# LocalStack: an emulator of AWS APIs that runs in a container on your laptop, so no AWS account is needed.
+# Pinned to 4.14.0, the last LocalStack release that starts without a LocalStack account or auth token.
+# Newer images (latest and the 2026.x versions) exit at start-up unless LOCALSTACK_AUTH_TOKEN is set.
+# The image has its own health check, so `docker compose ps` shows (healthy) once LocalStack is ready.
+# Same settings as 01-iac-concepts: run only one of the two at a time, because both use port 4566.
+services:
+  localstack:
+    image: localstack/localstack:4.14.0
+    ports:
+      - "127.0.0.1:4566:4566"   # the LocalStack gateway: every emulated AWS API answers on this port

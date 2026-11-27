@@ -1,0 +1,5 @@
+# Terraform's working files: the downloaded provider and the state (its record of what it created).
+# State can hold secrets in real projects, so it never goes into Git. Lesson 18 explains why.
+.terraform/
+*.tfstate
+*.tfstate.*

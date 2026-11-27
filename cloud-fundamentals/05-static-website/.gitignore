@@ -1,0 +1,6 @@
+# Terraform's working files: the downloaded provider and the state (its record of what it created).
+# State can hold secrets in plain text in real projects, such as database passwords, so it never goes into Git.
+# *.tfstate.* also covers terraform.tfstate.backup, the copy of the previous state.
+.terraform/
+*.tfstate
+*.tfstate.*
